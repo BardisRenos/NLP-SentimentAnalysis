@@ -61,7 +61,13 @@ Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) ar
 
 ## Text preprocessing
 
-
+Our text preprocessing will include the following steps:
+* Convert all text to lower case.
+* Replace REPLACE_BY_SPACE_RE symbols by space in text.
+* Remove symbols that are in BAD_SYMBOLS_RE from text.
+* Remove “x” in text.
+* Remove stop words.
+* Remove digits in text.
 
 
 
