@@ -23,6 +23,12 @@ IMDB dataset having 50K movie reviews for natural language processing or Text an
 <p align="justify"> 
 A recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes form a directed graph along a temporal sequence. This allows it to exhibit temporal dynamic behavior. Derived from feedforward neural networks, RNNs can use their internal state (memory) to process variable length sequences of inputs.
  </p>
+ 
+ <p align="center"> 
+<img src="https://github.com/BardisRenos/NLP-SentimentAnalysis/blob/master/RNN.png" width="300" height="200" style=centerme>
+</p>
+ 
+ 
 
 ## LSTM Architecture
 <p align="justify"> 
