@@ -58,3 +58,10 @@ Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) ar
  The number of the columns are : 2
 ```
 
+
+## Text preprocessing
+
+
+
+
+
