@@ -45,9 +45,6 @@ Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) ar
  import pandas as pd
 
  df = pd.read_csv('/home/renos/Desktop/IMDB Dataset.csv')
- # print(df['review'])
- # print(df[['Title', 'ID']])
- # print(df['product'].value_counts().count())
  print(df.count())
  print(len(df.columns))
 ```
