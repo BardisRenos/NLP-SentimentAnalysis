@@ -38,3 +38,26 @@ Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) ar
  <p align="center"> 
 <img src="https://github.com/BardisRenos/NLP-SentimentAnalysis/blob/master/lstm.png" width="300" height="300" style=centerme>
 </p>
+
+## Structure of the data set
+
+```python
+ import pandas as pd
+
+ df = pd.read_csv('/home/renos/Desktop/IMDB Dataset.csv')
+ # print(df['review'])
+ # print(df[['Title', 'ID']])
+ # print(df['product'].value_counts().count())
+ print(df.count())
+ print(len(df.columns))
+```
+
+```text
+
+ review       50000
+ sentiment    50000
+ dtype: int64
+
+ The number of the columns are : 2
+```
+
