@@ -85,3 +85,13 @@ Our text preprocessing will include the following steps:
 
 ```
 
+Creating the data training and testing
+
+```python
+ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, shuffle=True)
+ print(X_train.shape, y_train.shape)
+ print(X_test.shape, y_test.shape)
+```
+
+
+
