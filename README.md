@@ -94,4 +94,52 @@ Creating the data training and testing
 ```
 
 
+## Creating the deep learning model
+
+```python
+ model = Sequential()
+ model.add(Embedding(MAX_NB_WORDS, EMBEDDING_DIM, input_length=X.shape[1]))
+ model.add(SpatialDropout1D(0.2))
+ model.add(LSTM(100, dropout=0.2, recurrent_dropout=0.2))
+ model.add(Dense(2, activation='softmax'))
+ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc'])
+
+```
+Setting the other parameter of the model
+
+```python
+ epochs = 3
+ batch_size = 128
+
+ print(model.summary())
+
+ history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split=0.1, shuffle=True)
+ accuracy = model.evaluate(X_test, y_test)
+ print('Test set\n  Loss: {:0.2f}\n  Accuracy: {:0.2f}'.format(accuracy[0], accuracy[1]))
+
+```
+
+```python
+ # Plot model accuracy over epochs
+ import seaborn as sns
+ sns.reset_orig() 
+ plt.plot(history.history['acc'])
+ plt.plot(history.history['val_acc'])
+ plt.title('model accuracy')
+ plt.ylabel('accuracy')
+ plt.xlabel('epoch')
+ plt.legend(['train', 'valid'], loc='upper left')
+ plt.show()
+
+ # Plot model loss over epochs
+ plt.plot(history.history['loss'])
+ plt.plot(history.history['val_loss'])
+ plt.title('model loss')
+ plt.ylabel('loss')
+ plt.xlabel('epoch')
+ plt.legend(['train', 'valid'], loc='upper left')
+ plt.show()
+
+```
+
 
