@@ -69,5 +69,19 @@ Our text preprocessing will include the following steps:
 * Remove stop words.
 * Remove digits in text.
 
+```python
+ def tokeniz_with_spacy(text):
+    # Retrieving the column with all reviews
+    token_text = parser(text)
+    # Lemmatizing each token from the above setence
+    token_text = [word.lemma_.lower().strip() if word.lemma_ != "-PRON-" else word.lower_ for word in token_text]
+    # Removing stop words
+    token_text = [word.strip(".") for word in token_text if word not in stop_words and word not in punctuations
+                  and word.isalnum()]
+    # Removing empty strings
+    token_text = [word for word in token_text if len(word) > 1]
 
+    return token_text
+
+```
 
